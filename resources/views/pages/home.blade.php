@@ -3,6 +3,8 @@
 @include('nav')
 
 @section('content')
-<h1>This is homepage</h1>
+<div class="container">
+    <h1>Welcome to CusMer</h1>
+</div>
     
 @endsection

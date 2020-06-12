@@ -17,5 +17,6 @@ Route::get('/home', 'PagesController@home');
 
 //hitting service controller
 Route::get('/service', 'ServicesController@index');
-Route::post('/service', 'ServicesController@store');
 Route::get('/service/create', 'ServicesController@create');
+Route::post('/service', 'ServicesController@store');
+Route::get('/service/{services}', 'ServicesController@show');

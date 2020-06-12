@@ -35,4 +35,8 @@ class ServicesController extends Controller
         //redirecting back to the page
        */
     }
+
+    public function show(\App\Services $services){
+        return view('service.show', compact('services'));
+    }
 }
