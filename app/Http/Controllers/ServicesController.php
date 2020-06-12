@@ -11,6 +11,11 @@ class ServicesController extends Controller
         return view('service.index', compact('data'));
     }
 
+
+    public function create(){
+        return view('service.create');
+    }
+
     public function store(){
 
         //validating info
@@ -19,7 +24,7 @@ class ServicesController extends Controller
         ]);
 
         \App\Services::create($data);
-        return redirect()->back();
+        return redirect('/service');
 
       /*
         $service = new \App\Services();
