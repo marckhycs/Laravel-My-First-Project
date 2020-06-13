@@ -20,3 +20,5 @@ Route::get('/service', 'ServicesController@index');
 Route::get('/service/create', 'ServicesController@create');
 Route::post('/service', 'ServicesController@store');
 Route::get('/service/{services}', 'ServicesController@show');
+Route::get('/service/{services}/edit', 'ServicesController@edit');
+Route::patch('/service/{services}', 'ServicesController@update');

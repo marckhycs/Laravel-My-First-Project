@@ -10,9 +10,18 @@
     </div>  
     <br>
     <div class="list-group">
-    @foreach ($data as $item)
-       <a href="\service\{{$item->id}}"><li class="list-group-item">{{ $item->name }}</li></a>
-    @endforeach
+        
+        <div class="form-row">
+            @foreach ($data as $item)
+            <div class="col-md-10">
+                <a href="\service\{{$item->id}}"><li class="list-group-item">{{ $item->name }}</li></a>
+            </div>
+            <div class="col-md-1">
+            <a href="\service\{{$item->id}}\edit"><button class="btn btn-danger">Edit</button></a>
+            </div>
+            @endforeach
+       
+        </div>
     </div>
 </div>
 @endsection

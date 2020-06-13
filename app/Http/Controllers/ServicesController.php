@@ -39,4 +39,18 @@ class ServicesController extends Controller
     public function show(\App\Services $services){
         return view('service.show', compact('services'));
     }
+
+    public function edit(\App\Services $services){
+        return view('service.edit', compact('services'));
+    }
+
+    public function update(\App\Services $services){
+        $data = request()->validate([
+            'name' => 'required',
+        ]);
+
+        $services->update($data);
+
+        return redirect('/service');
+    }
 }
