@@ -16,11 +16,12 @@
         @error('name'){{$message}}@enderror
         </div>
         <div>
-            <button class="btn btn-info">Add Service</button>
+            <button class="btn btn-info">Edit Service</button>
         </div>
     </form>
     <div style="padding-top: 8px">
-        <a href="\service"><button class="btn btn-warning">Go Back</button></a>
+        
+         <a href="\service\{{$services->id}}"><button class="btn btn-warning">Go Back</button></a>
     </div>
 </div>
  @endsection 

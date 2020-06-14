@@ -53,4 +53,10 @@ class ServicesController extends Controller
 
         return redirect('/service');
     }
+
+    public function destroy(\App\Services $services){
+    
+        $services->delete();
+        return redirect('/service');
+    }
 }
