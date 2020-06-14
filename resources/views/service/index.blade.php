@@ -12,7 +12,7 @@
     <div class="list-group">
         
         <div class="form-row">
-            @foreach ($data as $item)
+            @forelse ($data as $item)
             <div class="col-md-10">
                 <a href="\service\{{$item->id}}"><li class="list-group-item">{{ $item->name }}</li></a>
             </div>
@@ -26,7 +26,9 @@
                     <button class="btn btn-danger">Delete</button>
                 </form>
             </div>
-            @endforeach
+            @empty
+                <h1>No record to show</h1>
+            @endforelse
        
         </div>
     </div>
