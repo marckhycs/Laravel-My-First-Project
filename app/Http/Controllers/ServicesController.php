@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+Use App\Services;
 
 class ServicesController extends Controller
 {
     public function index(){
-        $data = \App\Services::all();
+        $data =Services::all();
         return view('service.index', compact('data'));
     }
 
@@ -36,15 +37,15 @@ class ServicesController extends Controller
        */
     }
 
-    public function show(\App\Services $services){
+    public function show(Services $services){
         return view('service.show', compact('services'));
     }
 
-    public function edit(\App\Services $services){
+    public function edit(Services $services){
         return view('service.edit', compact('services'));
     }
 
-    public function update(\App\Services $services){
+    public function update(Services $services){
         $data = request()->validate([
             'name' => 'required',
         ]);
@@ -54,7 +55,7 @@ class ServicesController extends Controller
         return redirect('/service');
     }
 
-    public function destroy(\App\Services $services){
+    public function destroy(Services $services){
     
         $services->delete();
         return redirect('/service');
